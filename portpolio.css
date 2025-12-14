@@ -1,0 +1,334 @@
+/* --- Global Styles & Colors (Modern Night Palette) --- */
+:root {
+    --bg-dark: #1A1A1A;      /* Near Black Background */
+    --text-light: #E0E0E0;   /* Light Gray Text */
+    --accent-purple: #6F42C1;/* Deep Purple (Primary Action) */
+    --secondary-blue: #007BFF; /* Secondary Button Color */
+    --card-bg: #282828;      /* Slightly Lighter Card Background */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* --- Header/Navigation --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--bg-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--card-bg);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.header nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 0.9em;
+    opacity: 0.8;
+    transition: opacity 0.3s, color 0.3s;
+}
+
+.header nav a:hover {
+    opacity: 1;
+    color: var(--accent-purple);
+}
+
+/* --- Hero Section --- */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: 50px 5%;
+    background: linear-gradient(135deg, var(--bg-dark) 50%, #2c2c2c 100%); /* Subtle gradient */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: var(--accent-purple);
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* Skill Icons Styling */
+.skill-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.icon-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.skill-icons i {
+    font-size: 2.5em;
+    color: var(--text-light);
+    transition: color 0.3s;
+}
+
+.skill-icons i:hover {
+    color: var(--accent-purple);
+}
+
+.learning {
+    border-right: 2px solid var(--card-bg);
+    padding-right: 30px;
+}
+
+.learning-label {
+    font-size: 0.8em;
+    color: var(--accent-purple);
+    font-weight: bold;
+}
+
+/* Action Buttons */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.primary-btn {
+    background-color: var(--accent-purple);
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #8c6fe6; /* Lighter purple on hover */
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid var(--text-light);
+    color: var(--text-light);
+}
+
+.secondary-btn:hover {
+    background-color: var(--text-light);
+    color: var(--bg-dark);
+    transform: translateY(-2px);
+}
+
+/* --- General Section Styling --- */
+.section-container {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-container h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--accent-purple);
+}
+
+/* --- Projects Grid --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(111, 66, 193, 0.2);
+}
+
+.card h3 {
+    color: var(--secondary-blue);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.card-tech {
+    font-size: 0.9em;
+    color: #999;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.my-work-card {
+    border-left: 5px solid var(--accent-purple);
+    position: relative;
+    padding-top: 45px; 
+}
+
+.card-status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--accent-purple);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+/* Project Links */
+.card-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-project {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 700;
+    transition: opacity 0.3s;
+}
+
+.btn-project {
+    background-color: var(--secondary-blue);
+    color: white;
+}
+
+.btn-project.secondary {
+    background-color: transparent;
+    border: 1px solid var(--secondary-blue);
+    color: var(--secondary-blue);
+}
+
+.btn-project:hover {
+    opacity: 0.8;
+}
+
+/* --- Contact Section --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    text-align: left;
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact-info p, .education-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--accent-purple);
+}
+
+.contact-info a {
+    color: var(--text-light);
+    margin-top: 20px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--accent-purple);
+}
+
+.education-info h3 {
+    color: var(--accent-purple);
+    margin-bottom: 15px;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em;
+    color: #999;
+    border-top: 1px solid var(--card-bg);
+}
+
+/* --- Responsiveness (Key for mobile view) --- */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header nav a {
+        margin: 5px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .skill-icons {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .learning {
+        border: none;
+        padding-right: 0;
+    }
+}
